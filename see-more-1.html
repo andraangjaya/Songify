@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Songify - Traditional Songs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+  :root {
+      --primary: #1db954;
+      --dark-bg: #ffffff;
+      --card-bg: #f2f2f2;
+      --text-primary: #000000;
+      --text-secondary: #555555;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--dark-bg);
+      color: var(--text-primary);
+    }
+
+    /* Header */
+    header {
+      background: #000;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      color: #000;
+      background: #fff;
+      border-radius: 30px;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      width: 500px;
+    }
+
+    .search-bar:hover {
+      background: #fff;
+      transform: scale(1.05);
+      transition: background 0.3s ease, transform 0.3s ease;
+      opacity: 0.9;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      margin-left: 10px;
+      width: 100%;
+    }
+
+    .user-actions button {
+      background: transparent;
+      border: none;
+      color: #fff;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    /* Recently Played */
+    main {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease;
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 12px;
+      background: var(--card-bg);
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #fff;
+      padding: 30px 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    footer .logo {
+      font-size: 4rem;
+    }
+
+    footer ul {
+      list-style: none;
+      margin-top: 10px;
+      padding: 10px;
+    }
+
+    footer ul li {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    footer ul li:hover {
+      color: var(--primary);
+    }
+
+    .logo{
+        margin-left: 5%;
+    }
+
+    .ul{
+        margin-right: 20vh;
+    }
+
+    @media (max-width: 576px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+
+
+</style>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Songify</div>
+    <div class="search-bar">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Discover best of the song in Indonesia">
+    </div>
+    <div class="user-actions">
+      <button>Sign Up</button>
+    </div>
+  </header>
+
+  <!-- Recently Played -->
+  <main>
+    <h2>Traditional Song</h2>
+    
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+      <div class="card">
+        <div class="card-img"></div>
+        <p class="card-title">Title</p>
+        <p class="card-desc">Artist</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="logo">Songify</div><br>
+    <ul>
+      <li>National Song</li><br>
+      <li>About Us</li><br>
+      <li>Home</li>
+    </ul>
+    <div class="ul">
+    <ul>
+      <li>Traditional Song</li><br>
+      <li>Feedback</li><br>
+      <li>Settings</li>
+    </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Klik card → alert
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        alert("Lagu ini belum tersedia, nanti dihubungkan ke player 🎵");
+      });
+    });
+  </script>
+</body>
+</html>
