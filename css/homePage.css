@@ -5,11 +5,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header {
-  display: flex;
-  gap: 300px;
-  align-items: center;
-}
 
 .header-container{
   background-color: black;
@@ -17,8 +12,15 @@
   padding: 25px 40px;
   display: flex;
   flex-direction: row;
-  gap: 50px;
   align-items: center;
+  justify-content: space-between;
+}
+
+.left-side-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
 }
 
 .logo {
@@ -27,6 +29,14 @@
   gap: 12px;
   font-size: 24px;
   font-weight: 700;
+  height: 70px;
+  width: auto;
+}
+
+.logo-user{
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
 }
 
 .logo-icon {
@@ -37,7 +47,8 @@
 .auth-buttons {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
+  white-space: nowrap;
 }
 
 .btn {
@@ -47,8 +58,7 @@
   cursor: pointer;
   transition: all 0.3s;
   border: none;
-  font-size: 15px;
-  margin-left: 280px;
+  font-size: 20px;
 }
 
 .btn-signup {
@@ -63,14 +73,31 @@
 }
 
 .search-container {
+  display: flex;
   flex: 1;
-  max-width: 500px;
-  min-width: 200px;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
   position: relative;
 }
 
+.input-style {
+  width: 90%;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.input-style:focus {
+  border: none;
+  box-shadow: none;
+}
+
 .search-bar {
-  width: 200%;
+  width: 70%;
   padding: 14px 20px 14px 45px;
   border-radius: 50px;
   border: none;
@@ -91,7 +118,7 @@
 
 .search-icon {
   position: absolute;
-  right: -220px;
+  right: 30px;
   top: 50%;
   transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.7);
@@ -100,7 +127,7 @@
   cursor: pointer;
 }
 
-section-1{
+.section-1{
   display: flex;
   flex-direction: column;
   justify-content: center;
