@@ -22,6 +22,37 @@
   flex-direction: row;
   align-items: center;
   gap: 50px;
+  position: relative;
+}
+
+.burger-menu{
+  background-color: black;
+  border: none;
+}
+
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: #111;
+  position: absolute;
+  top: 60px; /* below navbar */
+  right: 0;
+  width: 200px;
+  padding: 1rem;
+}
+
+.nav-mobile a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.nav-mobile a:hover {
+  background: #333;
+}
+
+.nav-mobile.active {
+  display: flex;
 }
 
 .popup {

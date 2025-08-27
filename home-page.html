@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" href="css/homePage.css">
-  <script src="js/sign-up.js"></script>
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -28,7 +27,7 @@
 <div>
   <header class="header-container">
     <div class="left-side-header">
-      <div class="burger-menu">
+      <button onclick="burgerBtn" class="burger-menu" id="burgerBtn" aria-expanded="false" aria-controls="navMenu">
         <svg width="40px" height="40px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"
              stroke="#ffffff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -40,7 +39,12 @@
             <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
           </g>
         </svg>
+      </button>
+      <div class="nav-mobile w3-animate-right" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
       </div>
+
       <div>
         <img class="logo" src="/img/logoSongifyDark.jpeg">
       </div>
@@ -396,6 +400,8 @@
   </footer>
 
 </div>
+
+<script src="js/home-page.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-container {
+  background-color: black;
+  color: white;
+  padding: 25px 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-side-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+}
+
+.logo-user {
+  width: 30px;
+  height: 30px;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  font-size: 20px;
+}
+
+.btn-signup {
+  background: black;
+  color: white;
+}
+
+.btn-signup:hover {
+  color: black;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.footer-left-container{
+  margin-left: 60px;
+}
+
+.footer-left{
+  margin-top: 30px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.social-media{
+  margin-left: 100px;
+}
+
+.footer-right-container{
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  margin-right: 200px;
+}
+
+.left-nav{
+  font-size: 20px;
+  margin-right: 35px;
+}
+
+.right-nav{
+  font-size: 20px;
+}
+
+.nav-list{
+  color: white;
+  text-decoration: none;
+}
+
+.list-style{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  list-style: none;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 25px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 50px;
+}

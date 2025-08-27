@@ -8,3 +8,10 @@ function switchPopup(closeId, openId) {
   closePopup(closeId);
   openPopup(openId);
 }
+
+const burgerBtn = document.getElementById('burgerBtn');
+const navMenu = document.getElementById('navMenu');
+
+burgerBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
