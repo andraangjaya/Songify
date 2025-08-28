@@ -121,22 +121,22 @@
   top: 80px; 
   left: 0;
   width: 200px;
-  background: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
   padding: 10px;
   border-radius: 0 0 8px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 10px;
   display: block;
 }
 
 .nav-links a:hover {
-  background: #070707;
-  color: rgb(255, 255, 255);
+  background: #ffffff;
+  color: rgb(0, 0, 0);
 }
   
   /* MAIN CONTENT */
