@@ -4,184 +4,113 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Songify - National Songs</title>
-  <link rel="stylesheet" href="css/seeMore.css">
   <meta name="description" content="Songify music player - recently played songs">
 
-  <meta property="og:title" content="Songify - Recently Played">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="Songify logo">
-
+  <link rel="stylesheet" href="css/seeMore.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
+
+  <style>
+   
+  </style>
 </head>
 
 <body>
-  <div>
-    <header class="header-container">
-      <div class="left-side-header">
-        <span class="burger-menu">
-          <svg width="40px" height="40px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"
-               stroke="#ffffff">
-            <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
-            <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
-            <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
-          </svg>
-        </span>
-        <div>
-          <img class="logo" src="/img/logoSongifyDark.jpeg" alt="Songify Logo">
-        </div>
-      </div>
-  
-      <div class="nav-links">
-          <a href="#">Home</a>
-          <a href="national-songs.html">National Songs</a>
-          <a href="traditional-songs.html">Traditional Songs</a>
-          <a href="liked-songs.html">Liked Songs</a>
-          <a href="recently-played.html">Recently Played</a>
-          <a href="#">About Us</a>
-          <a href="help-page.html">Help</a>
-          <a href="#">Settings</a></b>
-        </div>
-  
-      <div class="search-container">
-        <div class="search-bar">
-          <label>
-            <input type="text" class="input-style" placeholder="Search for songs, artists, or albums...">
-          </label>
-          <img class="search-icon" src="https://www.svgrepo.com/show/7109/search.svg" alt="Search Icon">
-        </div>
-      </div>
-      <div class="auth-buttons">
-        <button class="btn btn-signup">Sign Up</button>
-        <svg class="logo-user" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.2166 19.3323C15.9349 17.9008 14.0727 17 12 17C9.92734 17 8.06492 17.9008 6.7832 19.3323M12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21ZM12 14C10.3431 14 9 12.6569 9 11C9 9.34315 10.3431 8 12 8C13.6569 8 15 9.34315 15 11C15 12.6569 13.6569 14 12 14Z"
-                stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  <!-- HEADER -->
+  <header class="header-container">
+    <div class="left-side-header">
+      <button class="burger-menu" id="burgerBtn">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff">
+          <path d="M4 18L20 18" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M4 12L20 12" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M4 6L20 6" stroke-width="2.4" stroke-linecap="round"/>
         </svg>
+      </button>
+
+      <div class="nav-mobile" id="navMenu">
+        <a href="home-page.html">Home</a>
+        <a href="recently-played.html">Recently Played</a>
+        <a href="liked-songs.html">Liked Songs</a>
+        <a href="national-songs.html">National Songs</a>
+        <a href="traditional-songs.html">Traditional Song</a>
+        <a href="about-us.html">About Us</a>
       </div>
-    </header>
+
+      <img class="logo" src="/img/logoSongifyDark.jpeg" alt="Songify Logo">
+    </div>
+
+    <div class="search-container">
+      <div class="search-bar">
+        <input type="text" class="input-style" placeholder="Search for songs, artists, or albums...">
+        <img class="search-icon" src="https://www.svgrepo.com/show/7109/search.svg" alt="search icon">
+      </div>
+    </div>
+
+    <div class="auth-buttons">
+      <button onclick="openPopup('loginPopup')" class="btn btn-signup">Sign Up</button>
+      <svg class="logo-user" viewBox="0 0 24 24" fill="none" stroke="#ffffff">
+        <path d="M17.2 19.3C15.9 17.9 14.1 17 12 17c-2.1 0-3.9.9-5.2 2.3M12 21c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9Zm0-7c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3Z" stroke-width="2"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- POPUPS -->
+  <div class="popup" id="loginPopup">
+    <div class="popup-content">
+      <div class="image-box"></div>
+      <div class="form-box">
+        <span class="close-btn" onclick="closePopup('loginPopup')">&times;</span>
+        <h2>Login</h2>
+        <form>
+          <input type="text" placeholder="Username" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+        </form>
+        <p class="signup-link">Belum punya akun? <a href="#" onclick="switchPopup('loginPopup','signupPopup')">Buat disini</a></p>
+      </div>
+    </div>
   </div>
-  
+
+  <div class="popup" id="signupPopup">
+    <div class="popup-content">
+      <div class="image-box"></div>
+      <div class="form-box">
+        <span class="close-btn" onclick="closePopup('signupPopup')">&times;</span>
+        <h2>Sign Up</h2>
+        <form>
+          <input type="text" placeholder="Username" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p class="signup-link">Sudah punya akun? <a href="#" onclick="switchPopup('signupPopup','loginPopup')">Login disini</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
   <main>
-    <h2>Recently Played </h2>
-    
+    <h2>Recently Played</h2>
     <div class="card-grid">
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
-      <div class="card">
-        <div class="card-img"></div>
-        <p class="card-title">Title</p>
-        <p class="card-desc">Artist</p>
-      </div>
-  
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
+      <div class="card"><div class="card-img"></div><p class="card-title">Title</p><p class="card-desc">Artist</p></div>
     </div>
   </main>
-  
+
+  <!-- FOOTER -->
   <div class="footer">
     <footer class="footer-left-container">
       <div>
@@ -233,14 +162,24 @@
       </div>
     </footer>
   </div>
-  
+
   <script>
-      const toggleBtn = document.querySelector('.burger-menu');
-      const navLinks = document.querySelector('.nav-links');
-  
-      toggleBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
+    function openPopup(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+    function closePopup(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    function switchPopup(closeId, openId) {
+      closePopup(closeId);
+      openPopup(openId);
+    }
+
+    const burgerBtn = document.getElementById('burgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    burgerBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
   </script>
-  </body>
-  </html>
+</body>
+</html>
