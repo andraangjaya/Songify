@@ -85,8 +85,8 @@ body {
 .help-card {
     background: white;
     border-radius: 10px;
-    height: 620px auto;
-    padding: 50px;
+    height: 0 auto;
+    padding: 60px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 .help-header {
@@ -166,6 +166,7 @@ body {
     font-size: 16px;
     color: #666;
     font-weight: 400;
+    
 }
 
 /* Help sections */
@@ -238,11 +239,13 @@ body {
 
 /* Section content */
 .section-content {
-    display: none;
-    padding: 0 0 20px 36px;
-    animation: slideDown 0.3s ease-out;
+   overflow: hidden; 
+   padding: 0 0 20px 36px;
+   animation: slideDown 0.3s ease-out;
 }
-
+.section-open{
+    max-height: 500px;
+}
 @keyframes slideDown {
     from {
         opacity: 0;
