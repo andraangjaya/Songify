@@ -341,3 +341,37 @@ body {
   gap: 40px;
   list-style: none;
 }
+
+/* BURGER MENU*/
+.burger-menu {
+  background: black;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  position: absolute;
+  top: 70px;
+  left: -10px;
+  width: 200px;
+  padding: 20px;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.nav-mobile.active {
+  display: flex;
+}
+
+.nav-mobile a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.nav-mobile a:hover {
+  background: #333;
+}

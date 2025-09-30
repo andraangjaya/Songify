@@ -9,14 +9,23 @@
 <body>
 <header class="header-container">
   <div class="left-side-header">
-    <div class="burger-menu">
-      <svg width="40px" height="40px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"
-           stroke="#ffffff">
-        <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
-        <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
-        <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
-      </svg>
-    </div>
+    <button class="burger-menu" id="burgerBtn">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff">
+          <path d="M4 18L20 18" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M4 12L20 12" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M4 6L20 6" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="nav-mobile" id="navMenu">
+        <a href="home-page.html">Home</a>
+        <a href="recently-played.html">Recently Played</a>
+        <a href="liked-songs.html">Liked Songs</a>
+        <a href="national-songs.html">National Songs</a>
+        <a href="traditional-songs.html">Traditional Song</a>
+        <a href="about-us.html">About Us</a>
+      </div>
+      
     <div>
       <img class="logo" src="/img/logoSongifyDark.jpeg" alt="Songify Logo">
     </div>
@@ -288,6 +297,12 @@
       },200);
     }
   }
+
+    const burgerBtn = document.getElementById('burgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    burgerBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
 </script>
 </body>
 </html>
