@@ -40,7 +40,8 @@
 
     <div class="search-container">
       <div class="search-bar">
-        <input type="text" class="input-style" placeholder="Search for songs, artists, or albums...">
+        <input type="text" id="searchInput" class="input-style" placeholder="Search for songs, artists, or albums..." onkeyup="searchSongs()">
+        <div id="output" class="result"></div>  
         <img class="search-icon" src="https://www.svgrepo.com/show/7109/search.svg" alt="search icon">
       </div>
     </div>
@@ -333,6 +334,50 @@
     burgerBtn.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
+
+    function searchSongs() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+    let found = false; // penanda apakah ada hasil yang cocok
+
+    cards.forEach(card => {
+    const title = card.querySelector('.card-title').innerText.toLowerCase();
+    const artist = card.querySelector('.card-desc').innerText.toLowerCase();
+      if (title.includes(input) || artist.includes(input)) {
+        card.style.display = '';
+        found = true;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+  
+    let notFoundMsg = document.getElementById('notFoundMsg');
+      if (!notFoundMsg) {
+        notFoundMsg = document.createElement('div');
+        notFoundMsg.id = 'notFoundMsg';
+        notFoundMsg.style.textAlign = 'center';
+        notFoundMsg.style.fontSize = '1.5rem';   
+        notFoundMsg.style.color = '#5555';        
+        notFoundMsg.style.fontWeight = 'bold';
+        notFoundMsg.style.position = 'absolute';
+        notFoundMsg.style.top = '40%';
+        notFoundMsg.style.left = '50%';
+        notFoundMsg.style.transform = 'translate(-50%, -50%)';
+        notFoundMsg.style.width = '100%';
+
+  
+        document.querySelector('.card-grid').style.position = 'relative';
+        document.querySelector('.card-grid').appendChild(notFoundMsg);
+      }
+
+      if (!found && input.trim() !== "") {
+        notFoundMsg.textContent = "Not Found";
+        notFoundMsg.style.display = 'block';
+      } else {
+        notFoundMsg.style.display = 'none';
+      }
+    }
   </script>
 </body>
 </html>
