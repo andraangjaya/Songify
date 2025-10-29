@@ -33,13 +33,22 @@ function searchSongs() {
   });
 }
 
-const card = document.getElementById('audio-card');
+const clickableCards = document.querySelectorAll('.card, .discover-more-cards, .universal-card-img-style');
 const audio = document.getElementById('audio-player');
 
-card.addEventListener('click', () => {
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
+clickableCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const src = card.dataset.audio;
+    if (audio.src.includes(src)) {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    } else {
+      // Otherwise, switch to a new audio and play it
+      audio.src = src;
+      audio.play();
+    }
+  });
 });

@@ -329,23 +329,6 @@ h2 {
   color: #666;
 }
 
-/* MINI PLAYER */
-.mini-player {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #181818;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  z-index: 5000;
-  border-top: 1px solid #333;
-  display: none; /* hidden by default */
-}
-
 .player-info {
   display: flex;
   align-items: center;
