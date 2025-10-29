@@ -2,32 +2,32 @@ const team = [
   {
     name: "Andra Angjaya",
     role: "Web Developer",
-    image: "https://plus.unsplash.com/premium_photo-1682094917716-03b5d476060a?q=80&w=800"
+    image: "/img/Andra.jpeg"
   },
   {
-    name: "Jane Doe",
+    name: "Muhammad Yusuf",
     role: "UI/UX Designer",
-    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800"
+    image: "/img/Aji.jpeg"
   },
   {
-    name: "John Smith",
-    role: "Backend Engineer",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800"
+    name: "Muhammad Faiz",
+    role: "Web Developer",
+    image: "/img/Faiz.jpeg"
   },
   {
-    name: "John Smith",
-    role: "Backend Engineer",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800"
+    name: "Zaidan Fakhri",
+    role: "Web Developer",
+    image: "/img/Zaidan.jpeg"
   },
   {
-    name: "John Smith",
-    role: "Backend Engineer",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800"
+    name: "Fachri El Kadhafi",
+    role: "Web Developer",
+    image: "/img/Fachri.jpeg"
   },
   {
-    name: "John Smith",
-    role: "Backend Engineer",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800"
+    name: "Zuyyin Kesha",
+    role: "Web Developer",
+    image: "/img/Zuyyin.jpeg"
   }
 ];
 
