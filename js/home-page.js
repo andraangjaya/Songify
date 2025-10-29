@@ -46,7 +46,6 @@ clickableCards.forEach(card => {
         audio.pause();
       }
     } else {
-      // Otherwise, switch to a new audio and play it
       audio.src = src;
       audio.play();
     }
