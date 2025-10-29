@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Songify - Traditional - Songs</title>
+  <meta name="description" content="Songify music player - recently played songs">
+
+  <link rel="stylesheet" href="../css/see-more.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+</head>
+
+<body>
+<!-- HEADER -->
+<header class="header-container">
+  <!-- LEFT SIDE HEADER -->
+  <div class="left-side-header">
+    <button onclick="burgerBtn" class="burger-menu" id="burgerBtn" aria-expanded="false" aria-controls="navMenu">
+      <svg width="40px" height="40px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"
+           stroke="#ffffff">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+           stroke-width="0.144"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
+          <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
+          <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
+        </g>
+      </svg>
+    </button>
+    <div class="nav-dropdown" id="navMenu">
+      <a class="menu-style" href="home.html">Home</a>
+      <a class="menu-style" href="recently-played.html">Recently Played</a>
+      <a class="menu-style" href="liked-songs.html">Liked Songs</a>
+      <a class="menu-style" href="national-songs.html">National Songs</a>
+      <a class="menu-style" href="traditional-songs.html">Traditional Song</a>
+      <a class="menu-style" href="help.html">Help</a>
+      <a class="menu-style" href="settings.html">Settings</a>
+      <a class="menu-style" href="about-us.html">About Us</a>
+    </div>
+
+    <div>
+      <img class="logo" src="/img/logo-songify-dark.jpeg">
+    </div>
+  </div>
+
+  <!-- SEARCH BAR -->
+  <div class="search-container">
+    <div class="search-bar">
+      <input type="text" id="searchInput" class="input-style" placeholder="Search for songs, artists, or albums..."
+             onkeyup="searchSongs()">
+      <div id="output" class="result"></div>
+      <img class="search-icon" src="https://www.svgrepo.com/show/7109/search.svg" alt="search icon">
+    </div>
+  </div>
+
+  <!-- AUTH BUTTONS -->
+  <div class="auth-buttons">
+    <button onclick="openPopup('loginPopup')" class="btn btn-signup">Sign Up</button>
+    <svg class="logo-user" viewBox="0 0 24 24" fill="none" stroke="#ffffff">
+      <path
+        d="M17.2 19.3C15.9 17.9 14.1 17 12 17c-2.1 0-3.9.9-5.2 2.3M12 21c-5 0-9-4-9-9s4-9 9-9 9 4 9 9-4 9-9 9Zm0-7c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3Z"
+        stroke-width="2"/>
+    </svg>
+  </div>
+</header>
+
+<!-- LOGIN POPUPS -->
+<div class="popup" id="loginPopup">
+  <div class="popup-content">
+    <div class="image-box"></div>
+    <div class="form-box">
+      <span class="close-btn" onclick="closePopup('loginPopup')">&times;</span>
+      <h2>Login</h2>
+      <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p class="signup-link">Belum punya akun? <a href="#" onclick="switchPopup('loginPopup','signupPopup')">Buat
+        disini</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- SIGNUP POPUP -->
+<div class="popup" id="signupPopup">
+  <div class="popup-content">
+    <div class="image-box"></div>
+    <div class="form-box">
+      <span class="close-btn" onclick="closePopup('signupPopup')">&times;</span>
+      <h2>Sign Up</h2>
+      <form>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p class="signup-link">Sudah punya akun? <a href="#" onclick="switchPopup('signupPopup','loginPopup')">Login
+        disini</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <h2>Traditional Songs</h2>
+  <div class="card-grid">
+
+    <div class="card">
+      <div class="card-img">
+        <img src="img/Ampar-Ampar%20Pisang%20(Kalimantan%20Selatan).png" alt="Indonesia Raya" class="playable-img"
+             href="AmparAmparPisang.mp3.mp3">
+      </div>
+      <p class="card-title">Ampar Ampar Pisang</p>
+      <p class="card-desc">Title</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="img/Angin%20Mamiri%20(Sulawesi%20Selatan).png" class="playable-img"
+             data-audio="audio/kasih-aba-aba.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="img/Apuse%20(Papua).png" class="playable-img" data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="img/Bungong%20Jeumpa%20(Aceh).png" class="playable-img" data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="img/Frame%2096.png" class="playable-img" data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="img/Gundul-Gundul%20Pacul%20(Jawa%20Tengah).png" alt="Tentang Sampean" class="playable-img"
+             data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="img/Manuk%20Dadali%20(Jawa%20Barat).png" alt="Tentang Sampean" class="playable-img"
+             data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="img/Rasa%20Sayange%20(Maluku).png" alt="Tentang Sampean" class="playable-img"
+             data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="img/Soleram%20(Riau).png" alt="Tentang Sampean" class="playable-img"
+             data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="img/Yamko%20Rambe%20Yamko%20(Papua).png" alt="Tentang Sampean" class="playable-img"
+             data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="../img/Frame%205.png" alt="Tentang Sampean" class="playable-img"
+             data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="../img/Frame%205.png" alt="Tentang Sampean" class="playable-img"
+             data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="../img/Frame%205.png" alt="Tentang Sampean" class="playable-img"
+             data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="../img/Frame%205.png" alt="Tentang Sampean" class="playable-img"
+             data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="../img/Frame%205.png" alt="Tentang Sampean" class="playable-img"
+             data-audio="audio/tentang-sampean.mp3">
+      </div>
+      <p class="card-title">Title</p>
+      <p class="card-desc">Artist</p>
+    </div>
+  </div>
+</main>
+
+
+<!-- FOOTER -->
+<div class="footer">
+  <footer class="footer-left-container">
+    <div>
+      <h1>Songify</h1>
+      <hr>
+    </div>
+
+    <div class="footer-left">
+      <div class="copyright">
+        © 2025 Songify
+      </div>
+
+      <div class="social-media">
+        Social media
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- FOOTER RIGHT CONTAINER -->
+  <footer class="footer-right-container">
+    <!-- LEFT NAV -->
+    <div class="left-nav">
+      <nav>
+        <ul class="list-style">
+          <li>
+            <a class="nav-list" href="national-songs.html">National Song</a>
+          </li>
+          <li>
+            <a class="nav-list" href="about-us.html">About Us</a>
+          </li>
+          <li>
+            <a class="nav-list" href="home.html">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- RIGHT NAV -->
+    <div class="right-nav">
+      <nav>
+        <ul class="list-style">
+          <li>
+            <a class="nav-list" href="traditional-songs.html">Traditional Song</a>
+          </li>
+          <li>
+            <a class="nav-list" href="#nationalsong">Feedback</a>
+          </li>
+          <li>
+            <a class="nav-list" href="help.html">Need Help?</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // JavaScript for interactivity and functionality here //
+  const audioPlayer = document.getElementById('audioPlayer');
+  const miniPlayer = document.getElementById('miniPlayer');
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  const progressBar = document.getElementById('progressBar');
+
+  const playerImg = document.getElementById('playerImg');
+  const playerTitle = document.getElementById('playerTitle');
+  const playerArtist = document.getElementById('playerArtist');
+
+
+  // Playable images functionality //
+  const burgerBtn = document.getElementById('burgerBtn');
+  const navMenu = document.getElementById('navMenu');
+  burgerBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  // Popup functionality //
+  function openPopup(id) {
+    document.getElementById(id).style.display = "flex";
+  }
+
+  function closePopup(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  function switchPopup(closeId, openId) {
+    closePopup(closeId);
+    openPopup(openId);
+  }
+
+
+  // Search functionality //
+  function searchSongs() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+    let found = false; // penanda apakah ada hasil yang cocok
+
+    cards.forEach(card => {
+      const title = card.querySelector('.card-title').innerText.toLowerCase();
+      const artist = card.querySelector('.card-desc').innerText.toLowerCase();
+      if (title.includes(input) || artist.includes(input)) {
+        card.style.display = '';
+        found = true;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>
