@@ -8,13 +8,41 @@ burgerBtn.addEventListener('click', () => {
 function openPopup(id) {
   document.getElementById(id).style.display = "flex";
 }
+
 function closePopup(id) {
   document.getElementById(id).style.display = "none";
 }
+
 function switchPopup(closeId, openId) {
   closePopup(closeId);
   openPopup(openId);
 }
+
+function hideAuthButton() {
+  document.getElementById("authBtn").style.display = "none";
+}
+
+function showSuccess(message) {
+  document.getElementById("successMessage").innerText = message;
+  openPopup("successPopup");
+}
+
+// Login form
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  closePopup("loginPopup");
+  hideAuthButton();
+  showSuccess("Login Successful!");
+});
+
+// Signup form
+document.getElementById("signupForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  closePopup("signupPopup");
+  hideAuthButton();
+  showSuccess("Sign Up Successful!");
+});
+
 
 function searchSongs() {
   const input = document.getElementById('searchInput').value.toLowerCase();

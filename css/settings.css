@@ -279,6 +279,9 @@
 /* Settings */
 main { padding: 2em; transition: color 0.4s ease; }
 .settings-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   background: white;
   padding: 2em;
   border-radius: 10px;
@@ -292,6 +295,7 @@ main { padding: 2em; transition: color 0.4s ease; }
   border-radius: 10px;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
   transition: background-color 0.4s ease, color 0.4s ease;
+  font-weight: bold;
 }
 
 /* Footer */
