@@ -2,32 +2,32 @@ const team = [
   {
     name: "Andra Angjaya",
     role: "Web Developer",
-    image: "/img/Andra.jpeg"
+    image: "/img/andra-profile.jpeg"
   },
   {
     name: "Muhammad Yusuf",
     role: "UI/UX Designer",
-    image: "/img/Aji.jpeg"
+    image: "/img/aji-profile.jpeg"
   },
   {
     name: "Muhammad Faiz",
     role: "Web Developer",
-    image: "/img/Faiz.jpeg"
+    image: "/img/faiz-profile.jpeg"
   },
   {
     name: "Zaidan Fakhri",
     role: "Web Developer",
-    image: "/img/Zaidan.jpeg"
+    image: "/img/zaidan-profile.jpeg"
   },
   {
     name: "Fachri El Kadhafi",
     role: "Web Developer",
-    image: "/img/Fachri.jpeg"
+    image: "/img/fachri-profile.jpeg"
   },
   {
     name: "Zuyyin Kesha",
     role: "Web Developer",
-    image: "/img/Zuyyin.jpeg"
+    image: "/img/zuyyin-profile.jpeg"
   }
 ];
 
