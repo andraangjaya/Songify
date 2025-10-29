@@ -557,22 +557,17 @@ hr {
 }
 
 .social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
   margin-left: 100px;
 }
 
 .footer-right-container {
   display: flex;
   flex-direction: row;
-  column-gap: 30px;
-  margin-right: 200px;
-}
-
-.left-nav {
-  font-size: 20px;
-  margin-right: 35px;
-}
-
-.right-nav {
+  column-gap: 60px;
+  margin-right: 150px;
   font-size: 20px;
 }
 
@@ -597,4 +592,9 @@ hr {
   justify-content: space-between;
   align-items: center;
   font-size: 50px;
+}
+
+.footer-songify-text {
+  color: white;
+  text-decoration: none;
 }

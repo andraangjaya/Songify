@@ -1,0 +1,49 @@
+// JavaScript for interactivity and functionality here //
+const audioPlayer = document.getElementById('audioPlayer');
+const miniPlayer = document.getElementById('miniPlayer');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const progressBar = document.getElementById('progressBar');
+
+const playerImg = document.getElementById('playerImg');
+const playerTitle = document.getElementById('playerTitle');
+const playerArtist = document.getElementById('playerArtist');
+
+
+// Playable images functionality //
+const burgerBtn = document.getElementById('burgerBtn');
+const navMenu = document.getElementById('navMenu');
+burgerBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+// Popup functionality //
+function openPopup(id) {
+  document.getElementById(id).style.display = "flex";
+}
+
+function closePopup(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+function switchPopup(closeId, openId) {
+  closePopup(closeId);
+  openPopup(openId);
+}
+
+// Search functionality //
+function searchSongs() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const cards = document.querySelectorAll('.card');
+  let found = false; // penanda apakah ada hasil yang cocok
+
+  cards.forEach(card => {
+    const title = card.querySelector('.card-title').innerText.toLowerCase();
+    const artist = card.querySelector('.card-desc').innerText.toLowerCase();
+    if (title.includes(input) || artist.includes(input)) {
+      card.style.display = '';
+      found = true;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}

@@ -295,39 +295,64 @@ main { padding: 2em; transition: color 0.4s ease; }
 }
 
 /* Footer */
-footer {
-  background-color: black; color: white;
-  padding: 2em;
-  display: flex; justify-content: space-between; flex-wrap: wrap;
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-footer h1 { font-size: 2em; margin-bottom: 0.5em; }
-footer ul { list-style: none; padding: 0; }
-footer ul li { margin: 0.3em 0; }
-
-/* Responsive */
-@media (max-width: 600px) {
-  .setting-item { flex-direction: column; align-items: flex-start; }
+.footer-left-container {
+  margin-left: 60px;
 }
 
-/* Dark Mode */
-body.dark { background-color: #121212; color: #f0f0f0; }
-body.dark header { background-color: #1e1e1e; }
-body.dark .settings-box { background: #222; color: white; }
-body.dark .setting-item { background: #333; color: white; }
-body.dark footer { background-color: #000; color: #fff; }
-body.dark .sidebar { background-color: #1e1e1e; color: #fff; }
-body.dark .sidebar ul li { border-bottom: 1px solid #444; }
-body.dark .close-btn { color: #fff; }
-body.dark .close-btn:hover { color: #ff4d4d; }
-
-/* Social Icons */
-.social-icons {
+.footer-left {
+  margin-top: 30px;
+  font-size: 15px;
   display: flex;
-  gap: 5px;
+  flex-direction: row;
 }
-.social-icons img {
-  width: 40px; height: 40px;
-  transition: transform 0.3s ease;
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 100px;
 }
-.social-icons img:hover { transform: scale(1.2); }
+
+.footer-right-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 60px;
+  margin-right: 150px;
+  font-size: 20px;
+}
+
+.nav-list {
+  color: white;
+  text-decoration: none;
+}
+
+.list-style {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  list-style: none;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 25px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 50px;
+}
+
+.footer-songify-text {
+  color: white;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: white;
+  width: 100%;
+  margin-top: 20px;
+}
