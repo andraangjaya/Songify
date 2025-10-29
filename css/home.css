@@ -320,7 +320,9 @@
 }
 
 .title-artist {
+  color: #666;
   font-size: 20px;
+  font-weight: normal;
 }
 
 .section-1-left-container {
@@ -429,7 +431,7 @@
   margin-left: 35px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
   margin-bottom: 20px;
 }
