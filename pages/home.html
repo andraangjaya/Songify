@@ -64,60 +64,7 @@
       </div>
     </div>
     <div class="auth-buttons">
-      <button onclick="openPopup('loginPopup')" class="btn btn-signup" id="authBtn">Sign Up</button>
-
-      <div class="popup" id="loginPopup">
-        <div class="popup-content">
-          <div class="image-box"></div>
-          <div class="form-box">
-            <span class="close-btn" onclick="closePopup('loginPopup')">&times;</span>
-            <div>
-              <h2 class="login-text">Login</h2>
-            </div>
-            <div>
-              <form id="loginForm">
-                <input type="text" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit">Login</button>
-              </form>
-            </div>
-            <div>
-              <p class="signup-link">
-                belum punya akun?
-                <a href="#" onclick="switchPopup('loginPopup','signupPopup')">buat disini</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="popup" id="signupPopup">
-        <div class="popup-content">
-          <div class="image-box"></div>
-          <div class="form-box">
-            <span class="close-btn" onclick="closePopup('signupPopup')">&times;</span>
-            <h2>Sign Up</h2>
-            <form id="signupForm">
-              <input type="text" placeholder="Username" required>
-              <input type="email" placeholder="Email" required>
-              <input type="password" placeholder="Password" required>
-              <button type="submit">Sign Up</button>
-            </form>
-            <p class="signup-link">
-              sudah punya akun?
-              <a href="#" onclick="switchPopup('signupPopup','loginPopup')">login disini</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="popup" id="successPopup">
-        <div class="popup-content">
-          <h2 id="successMessage">Login Successful!</h2>
-          <button onclick="closePopup('successPopup')">OK</button>
-        </div>
-      </div>
-
+      <button onclick="window.location.href='login.html'" class="btn btn-signup" id="authBtn">Sign Up</button>
       <svg class="logo-user" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="User / User_Circle">
           <path
